@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | Nickel Alloy Wires, Bars, Pipes, Sheets — Inconel, Monel, Hastelloy | YIXIN Alloy</title>
+  <meta name="description" content="Full nickel alloy range: welding wires, bars, pipes, sheets, strips & discs in Inconel (600/601/625/718/X-750/690), Monel (400/K-500), Hastelloy (C-276/C-22/B-2/X), Incoloy (800/825) & pure Nickel 200/201. Chemical composition & specs." />
+  <meta name="keywords" content="Inconel 625, Inconel 718, Monel 400, Hastelloy C-276, Incoloy 825, Nickel 200, nickel alloy wire bar pipe sheet, ERNiCrMo-3" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="products">
+  <div id="site-header"></div>
+
+  <section class="page-banner">
+    <div class="container page-banner__inner">
+      <div class="breadcrumb"><a href="index.html">Home</a> / <span>Products</span></div>
+      <h1>Nickel &amp; Superalloy Product Range</h1>
+      <p>Welding wires, bars, pipes, sheets, strips and forged discs across every nickel alloy family —
+         Inconel, Monel, Hastelloy, Incoloy and pure nickel, each supplied with full certification.</p>
+    </div>
+  </section>
+
+  <!-- Quick family nav -->
+  <section class="section" style="padding-block:46px">
+    <div class="container">
+      <div class="section__head section__head--left">
+        <span class="section__eyebrow">Alloy Families</span>
+        <h2>Browse by Material</h2>
+      </div>
+      <div class="family-grid" id="familyGrid"></div>
+    </div>
+  </section>
+
+  <!-- Product forms (clean card grid) -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__eyebrow">Product Forms</span>
+        <h2>Available Forms</h2>
+        <p>Every nickel alloy supplied in the form your application needs — each with full certification.</p>
+      </div>
+      <div class="form-grid" id="formShowcase"></div>
+    </div>
+  </section>
+
+  <!-- Detailed grade catalog -->
+  <section class="section section--alt" style="padding-top:0">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__eyebrow">Grade Catalog</span>
+        <h2>Featured Grades &amp; Specifications</h2>
+        <p>Click any grade for full chemical composition, mechanical properties and applications.</p>
+      </div>
+      <div class="grid grid--3" id="productGrid"></div>
+    </div>
+  </section>
+
+  <!-- Sizes -->
+  <section class="section section--alt" style="padding-top:0">
+    <div class="container">
+      <div class="sizes">
+        <div class="sizes__col">
+          <span class="section__eyebrow">Dimensions</span>
+          <h3>Available Diameters</h3>
+          <ul class="sizes__list">
+            <li>0.8 mm</li><li>1.0 mm</li><li>1.2 mm</li><li>1.6 mm</li><li>2.4 mm</li>
+            <li class="sizes__list--custom">Custom Sizes</li>
+          </ul>
+        </div>
+        <div class="sizes__col">
+          <span class="section__eyebrow">Product Forms</span>
+          <h3>Supplied As</h3>
+          <ul class="sizes__forms">
+            <li>Wire</li><li>Strip</li><li>Coil</li><li>Disc</li><li>Bar</li>
+            <li>Rod</li><li>Pipe</li><li>Tube</li><li>Sheet</li><li>Plate</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container cta-banner__inner">
+      <h2>Need a Specific Grade or Size?</h2>
+      <p>Tell us your specification — we manufacture custom chemistry and dimensions to order.</p>
+      <div class="cta-banner__actions">
+        <a href="contact.html" class="btn btn--accent btn--lg">Request a Quote</a>
+        <a href="resources.html" class="btn btn--outline-light btn--lg" data-catalog>Download Catalog</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <a href="contact.html" class="floating-cta">Request a Quote</a>
+  <script src="js/products-data.js"></script>
+  <script>
+    (function () {
+      var P = window.YIXIN_PRODUCTS || {};
+      var FAM = window.YIXIN_FAMILIES || [];
+      var FORMS = window.YIXIN_FORMS || [];
+
+      /* ----- Family cards (material overview only) ----- */
+      var fg = document.getElementById('familyGrid');
+      if (fg) {
+        fg.innerHTML = FAM.map(function (f) {
+          var count = f.grades.length;
+          return '<article class="family-card">' +
+            '<div class="family-card__head">' +
+              '<div class="family-card__title"><h3>' + f.name + '</h3><span>' + f.tagline + '</span></div>' +
+              '<span class="family-card__count">' + count + ' grade' + (count === 1 ? '' : 's') + '</span>' +
+            '</div>' +
+            '<div class="family-card__body">' +
+              '<a href="grades.html#fam-' + f.key + '" class="link-arrow">View grades →</a></div>' +
+          '</article>';
+        }).join('');
+      }
+
+      /* ----- Product form cards ----- */
+      var fs = document.getElementById('formShowcase');
+      if (fs) {
+        fs.innerHTML = FORMS.map(function (form) {
+          var specs = form.specs.map(function (s) {
+            return '<li>' + s + '</li>';
+          }).join('');
+          return '<article class="form-card2">' +
+            '<div class="form-card2__media" style="background-image:url(\'' + form.image + '\')"></div>' +
+            '<div class="form-card2__body">' +
+              '<h3>' + form.name + '</h3>' +
+              '<p>' + form.desc + '</p>' +
+              '<ul class="form-card2__specs">' + specs + '</ul>' +
+              '<a href="contact.html" class="link-arrow">Enquire →</a>' +
+            '</div>' +
+          '</article>';
+        }).join('');
+      }
+
+      /* ----- Detailed grade grid ----- */
+      var grid = document.getElementById('productGrid');
+      if (grid) {
+        grid.innerHTML = Object.keys(P).map(function (slug) {
+          var p = P[slug];
+          return '<a href="product.html?grade=' + slug + '" class="card grade-card">' +
+            '<div class="grade-card__top"><h3>' + p.name + '</h3><span class="tag">' + p.tag + '</span></div>' +
+            '<p>' + p.overview.slice(0, 116) + '…</p>' +
+            '<div class="grade-card__foot"><span class="grade-card__aws">' + p.aws + '</span>' +
+            '<span class="link-arrow">Details →</span></div>' +
+          '</a>';
+        }).join('');
+      }
+    })();
+  </script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

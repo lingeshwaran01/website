@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="metaTitle">Product Detail | Nickel Alloy Welding Wire | YIXIN Alloy</title>
+  <meta name="description" id="metaDesc" content="Detailed specifications, chemical composition and mechanical properties of nickel alloy welding wires from YIXIN Alloy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="product">
+  <div id="site-header"></div>
+
+  <section class="page-banner product-banner">
+    <div class="container page-banner__inner">
+      <div class="breadcrumb"><a href="index.html">Home</a> / <a href="products.html">Products</a> / <span id="bcName">Product</span></div>
+      <span class="product-banner__family" id="pFamily">Nickel Alloy</span>
+      <h1 id="pName">Nickel Alloy Welding Wire</h1>
+      <p id="pCategory">Premium nickel alloy welding consumable.</p>
+      <div class="product-banner__meta" id="pMeta"></div>
+    </div>
+  </section>
+
+  <!-- Key facts highlight strip -->
+  <section class="prod-facts">
+    <div class="container">
+      <div class="prod-facts__grid" id="pFacts"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="split" style="align-items:flex-start">
+        <div class="split__media comp-media" id="compVisual"></div>
+        <div class="split__content prose">
+          <span class="section__eyebrow">Product Overview</span>
+          <h2 id="pOverviewTitle" style="font-size:1.7rem">Overview</h2>
+          <p id="pOverview"></p>
+          <div class="pill-list" id="pStandards" style="margin-bottom:24px"></div>
+          <div class="cta-banner__actions" style="justify-content:flex-start">
+            <a href="contact.html" class="btn btn--accent">Request a Quote</a>
+            <a href="#" class="btn btn--ghost js-datasheet" data-catalog>Download Datasheet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical specifications -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="grid grid--2" style="align-items:start">
+        <div class="prod-panel prod-panel--tint">
+          <div class="section__head section__head--left" style="margin-bottom:24px">
+            <span class="section__eyebrow">Specifications</span>
+            <h2 style="font-size:1.6rem">Technical Specifications</h2>
+          </div>
+          <table class="spec-table" id="specTable"></table>
+        </div>
+        <div class="prod-panel">
+          <div class="section__head section__head--left" style="margin-bottom:24px">
+            <span class="section__eyebrow">Mechanical</span>
+            <h2 style="font-size:1.6rem">Mechanical Properties</h2>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table" id="mechTable">
+              <thead><tr><th>Property</th><th>Typical Value</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chemical composition -->
+  <section class="section">
+    <div class="container">
+      <div class="section__head section__head--left">
+        <span class="section__eyebrow">Composition</span>
+        <h2 style="font-size:1.6rem">Chemical Composition (wt %)</h2>
+        <p>Nominal values per AWS A5.14 / ASTM specifications. Mill Test Certificate supplied with every shipment.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="chemTable">
+          <thead><tr><th>Element</th><th>Content (%)</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications + downloads + RFQ -->
+  <section class="section section--alt">
+    <div class="container grid grid--2" style="align-items:start">
+      <div>
+        <div class="section__head section__head--left" style="margin-bottom:20px">
+          <span class="section__eyebrow">Applications</span>
+          <h2 style="font-size:1.6rem">Typical Applications</h2>
+        </div>
+        <ul class="checklist" id="appList"></ul>
+        <div class="section__head section__head--left mt-40" style="margin-bottom:16px">
+          <span class="section__eyebrow">Downloads</span>
+          <h2 style="font-size:1.6rem">Documentation</h2>
+        </div>
+        <a href="#" class="resource-item js-datasheet" data-catalog style="margin-bottom:12px"><span class="resource-item__icon">📄</span><span class="resource-item__text"><strong>Technical Datasheet (PDF)</strong><span>Full specification sheet</span></span><span class="link-arrow">Download →</span></a>
+        <a href="#" class="resource-item js-datasheet" data-catalog><span class="resource-item__icon">⚠️</span><span class="resource-item__text"><strong>Safety Data Sheet (SDS)</strong><span>Handling &amp; safety information</span></span><span class="link-arrow">Download →</span></a>
+      </div>
+      <div class="form-card">
+        <h3 style="color:var(--navy);margin-bottom:6px">Request a Quotation (RFQ)</h3>
+        <p style="color:var(--text-muted);font-size:.92rem;margin-bottom:20px">Get pricing for this grade within 24 hours.</p>
+        <form data-quote novalidate>
+          <div class="form-row">
+            <div class="field"><label>Company Name *</label><input type="text" required /></div>
+            <div class="field"><label>Contact Person *</label><input type="text" required /></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label>Email *</label><input type="email" required /></div>
+            <div class="field"><label>Phone</label><input type="tel" /></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label>Product Required</label><input type="text" id="rfqProduct" readonly /></div>
+            <div class="field"><label>Quantity</label><input type="text" placeholder="e.g. 500 kg" /></div>
+          </div>
+          <div class="field"><label>Message</label><textarea rows="3" placeholder="Diameter, standard, delivery timeline..."></textarea></div>
+          <button type="submit" class="btn btn--accent btn--block btn--lg">Get Instant Quote</button>
+          <p class="form-success" hidden>✅ Thank you! Your request has been received. Our team will reply within 24 hours.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <a href="contact.html" class="floating-cta">Request a Quote</a>
+  <script src="js/products-data.js"></script>
+  <script>
+    (function () {
+      var params = new URLSearchParams(location.search);
+      var slug = params.get('grade') || 'nickel-200';
+      var P = window.YIXIN_PRODUCTS || {};
+      var p = P[slug] || P['nickel-200'];
+
+      document.getElementById('metaTitle').textContent = p.name + ' (' + p.aws + ') | YIXIN Alloy';
+      document.getElementById('metaDesc').setAttribute('content', p.overview);
+      document.getElementById('bcName').textContent = p.name;
+      document.getElementById('pName').textContent = p.name;
+      document.getElementById('pCategory').textContent = p.category;
+      var famNames = { nickel: 'Pure Nickel', inconel: 'Inconel', monel: 'Monel', hastelloy: 'Hastelloy', incoloy: 'Incoloy', welding: 'Welding Consumable' };
+      document.getElementById('pFamily').textContent = famNames[p.family] || 'Nickel Alloy';
+      document.getElementById('pMeta').innerHTML =
+        '<span class="product-banner__badge"><small>AWS</small>' + p.aws + '</span>' +
+        '<span class="product-banner__badge"><small>UNS</small>' + p.uns + '</span>' +
+        '<span class="product-banner__badge"><small>Type</small>' + p.category + '</span>';
+      document.getElementById('pOverviewTitle').textContent = p.name;
+      document.getElementById('pOverview').textContent = p.overview;
+      document.getElementById('pStandards').innerHTML = p.standards.map(function (s) { return '<span class="pill">' + s + '</span>'; }).join('');
+      document.getElementById('rfqProduct').value = p.name;
+
+      /* ----- Key facts strip (pull standout values) ----- */
+      function findMech(key) {
+        var hit = (p.mechanical || []).find(function (r) { return r[0].toLowerCase().indexOf(key) !== -1; });
+        return hit ? hit[1] : null;
+      }
+      var facts = [
+        { label: 'Tensile Strength', value: findMech('tensile') || '—' },
+        { label: 'Yield Strength', value: findMech('yield') || '—' },
+        { label: 'Elongation', value: findMech('elong') || '—' },
+        { label: 'Diameters', value: (p.diameters || []).filter(function (d) { return d !== 'Custom'; }).length + ' sizes' }
+      ];
+      document.getElementById('pFacts').innerHTML = facts.map(function (f) {
+        return '<div class="prod-fact"><span class="prod-fact__value">' + f.value + '</span>' +
+          '<span class="prod-fact__label">' + f.label + '</span></div>';
+      }).join('');
+
+      document.getElementById('specTable').innerHTML =
+        '<tr><th>AWS Classification</th><td>' + p.aws + '</td></tr>' +
+        '<tr><th>UNS Number</th><td>' + p.uns + '</td></tr>' +
+        '<tr><th>Category</th><td>' + p.category + '</td></tr>' +
+        '<tr><th>Classification</th><td>' + p.classification + '</td></tr>' +
+        '<tr><th>Available Diameters</th><td>' + p.diameters.join(', ') + '</td></tr>' +
+        '<tr><th>Surface Finish</th><td>Bright &amp; Clean</td></tr>' +
+        '<tr><th>Packaging</th><td>Spools, Coils, Drums</td></tr>';
+
+      document.querySelector('#mechTable tbody').innerHTML = p.mechanical.map(function (r) {
+        return '<tr><td>' + r[0] + '</td><td>' + r[1] + '</td></tr>';
+      }).join('');
+      document.querySelector('#chemTable tbody').innerHTML = p.chemistry.map(function (r) {
+        return '<tr><td>' + r[0] + '</td><td>' + r[1] + '</td></tr>';
+      }).join('');
+      document.getElementById('appList').innerHTML = p.applications.map(function (a) {
+        return '<li>' + a + '</li>';
+      }).join('');
+
+      /* ----- Auto-generated alloy composition visual ----- */
+      var ELEMENT_COLORS = {
+        Ni: '#4F9DD0', Cr: '#62B36B', Fe: '#B0613F', Mo: '#8E6FC9', Cu: '#D0833E',
+        Mn: '#C95F8B', C: '#3F454C', Si: '#C9A93E', Co: '#3F6FD0', Nb: '#2FC2AE',
+        Ti: '#9AA0A6', Al: '#C7BBA6', S: '#E0C84F', W: '#6B6F76', V: '#D04F6F',
+        P: '#9C7BD0', N: '#5FB0C9', Ta: '#B0A03F', Pb: '#5A6068'
+      };
+      function elemSymbol(name) {
+        var m = name.match(/\(([^)]+)\)/);
+        var sym = m ? m[1] : name;
+        return sym.split('+')[0].trim();
+      }
+      function elemColor(sym) {
+        if (ELEMENT_COLORS[sym]) return ELEMENT_COLORS[sym];
+        var h = 0; for (var i = 0; i < sym.length; i++) h = sym.charCodeAt(i) + ((h << 5) - h);
+        return 'hsl(' + (Math.abs(h) % 360) + ', 42%, 55%)';
+      }
+      function parsePct(v) {
+        if (/balance/i.test(v)) return null;
+        var nums = (v.match(/[0-9]+(?:\.[0-9]+)?/g) || []).map(parseFloat);
+        if (!nums.length) return 0;
+        if (nums.length >= 2 && /[\u2013\-]/.test(v)) return (nums[0] + nums[1]) / 2;
+        return nums[0];
+      }
+      function buildComposition(prod) {
+        var chem = prod.chemistry || [];
+        var parsed = chem.map(function (r) {
+          return { name: r[0], raw: r[1], sym: elemSymbol(r[0]), val: parsePct(r[1]) };
+        });
+        var known = parsed.reduce(function (s, e) { return s + (e.val || 0); }, 0);
+        parsed.forEach(function (e) { if (e.val === null) e.val = Math.max(0, 100 - known); });
+        var total = parsed.reduce(function (s, e) { return s + e.val; }, 0) || 1;
+        parsed.forEach(function (e) { e.pct = e.val / total * 100; });
+        var sorted = parsed.slice().sort(function (a, b) { return b.val - a.val; });
+        var primary = sorted[0];
+
+        var bar = sorted.map(function (e) {
+          return '<span class="comp-bar__seg" style="width:' + e.pct.toFixed(2) + '%;background:' +
+            elemColor(e.sym) + '" title="' + e.name + ' · ' + Math.round(e.pct) + '%"></span>';
+        }).join('');
+
+        var legend = sorted.map(function (e) {
+          return '<li><span class="comp-legend__dot" style="background:' + elemColor(e.sym) + '"></span>' +
+            '<span class="comp-legend__name">' + e.name + '</span>' +
+            '<span class="comp-legend__val">' + (e.pct < 1 ? '<1' : Math.round(e.pct)) + '%</span></li>';
+        }).join('');
+
+        return '<div class="comp-card">' +
+            '<div class="comp-card__head">' +
+              '<span class="comp-card__symbol" style="background:' + elemColor(primary.sym) + '">' + primary.sym + '</span>' +
+              '<div class="comp-card__title"><strong>' + prod.name + '</strong>' +
+                '<span>' + prod.aws + ' · ' + prod.uns + '</span></div>' +
+            '</div>' +
+            '<div class="comp-bar">' + bar + '</div>' +
+            '<ul class="comp-legend">' + legend + '</ul>' +
+            '<p class="comp-card__note">Auto-generated from nominal composition (wt %)</p>' +
+          '</div>';
+      }
+      var cv = document.getElementById('compVisual');
+      if (cv) cv.innerHTML = buildComposition(p);
+
+      /* Datasheet buttons download this specific grade */
+      document.querySelectorAll('.js-datasheet').forEach(function (el) {
+        el.setAttribute('data-grade', slug);
+      });
+    })();
+  </script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
