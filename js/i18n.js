@@ -25,7 +25,7 @@ window.YIXIN_I18N = {
     'cta.quote': 'Request a Quote',
 
     /* Footer */
-    'footer.tagline': 'Creator of excellence in alloy materials — your professional nickel alloy welding consumables provider, serving 1000+ clients worldwide since 2014.',
+    'footer.tagline': '<strong>A trusted manufacturer of premium nickel alloy welding consumables.</strong> Since 2014, we have supplied over 1,000 clients worldwide with certified, project-ready solutions engineered for the most demanding applications.',
     'footer.products': 'Products',
     'footer.allProducts': 'All Products',
     'footer.company': 'Company',
@@ -131,7 +131,7 @@ window.YIXIN_I18N = {
     'nav.contact': '联系我们',
     'cta.quote': '获取报价',
 
-    'footer.tagline': '合金材料卓越的缔造者——专业的镍合金焊接材料供应商，自2014年以来已服务全球1000多家客户。',
+    'footer.tagline': '值得信赖的高品质镍合金焊接材料制造商。自2014年以来，我们已为全球1,000多家客户提供经过认证、可直接用于项目的解决方案，专为最严苛的应用而设计。',
     'footer.products': '产品',
     'footer.allProducts': '全部产品',
     'footer.company': '公司',
@@ -230,7 +230,7 @@ window.YIXIN_I18N = {
     'nav.contact': 'Contacto',
     'cta.quote': 'Solicitar Cotización',
 
-    'footer.tagline': 'Creador de excelencia en materiales de aleación — su proveedor profesional de consumibles de soldadura de aleaciones de níquel, al servicio de más de 1000 clientes en todo el mundo desde 2014.',
+    'footer.tagline': 'Fabricante de confianza de consumibles de soldadura de aleaciones de níquel de primera calidad. Desde 2014, hemos suministrado a más de 1000 clientes en todo el mundo soluciones certificadas y listas para proyectos, diseñadas para las aplicaciones más exigentes.',
     'footer.products': 'Productos',
     'footer.allProducts': 'Todos los Productos',
     'footer.company': 'Empresa',

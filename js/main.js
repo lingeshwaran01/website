@@ -96,8 +96,8 @@
       '</div></div>' +
       '<header class="header" id="siteHeader"><div class="container header__inner">' +
         '<a href="index.html" class="brand">' +
-          '<span class="brand__mark">YA</span>' +
-          '<span class="brand__text"><strong>Danyang Yixin Alloy</strong><small>Co., Ltd · Nickel Alloy Specialist</small></span>' +
+          '<img src="assets/img/logo.png" alt="Yixin Alloy" class="brand__logo">' +
+          '<span class="brand__text"><strong>Yixin Alloy</strong><small>Danyang Yixin Alloy Co., Ltd</small></span>' +
         '</a>' +
         '<nav class="nav" id="nav">' +
           '<div class="nav__links">' + links + '</div>' +
@@ -114,16 +114,35 @@
         '<div class="container footer__grid">' +
           '<div class="footer__col footer__brand">' +
             '<a href="index.html" class="brand brand--light">' +
-              '<span class="brand__mark">YA</span>' +
-              '<span class="brand__text"><strong>Danyang Yixin Alloy</strong><small>Co., Ltd · Nickel Alloy Specialist</small></span>' +
+              '<img src="assets/img/logo.png" alt="Yixin Alloy" class="brand__logo brand__logo--light">' +
+              '<span class="brand__text"><strong>Yixin Alloy</strong><small>Danyang Yixin Alloy Co., Ltd</small></span>' +
             '</a>' +
             '<p>' + t('footer.tagline') + '</p>' +
-            '<div class="footer__std">ASTM · AMS · AWS · BSI · GB/T · DIN · JIS · GOST · SS</div>' +
+            '<div class="footer__std"><span class="footer__std-label">Certified to International Standards</span>' +
+              '<div class="footer__std-chips">' +
+                '<span>ASTM</span><span>AMS</span><span>AWS</span><span>BSI</span><span>GB/T</span><span>DIN</span><span>JIS</span><span>GOST</span><span>SS</span>' +
+              '</div>' +
+            '</div>' +
             '<div class="footer__social">' +
-              '<a href="#" aria-label="LinkedIn">in</a>' +
-              '<a href="#" aria-label="YouTube">▶</a>' +
-              '<a href="#" aria-label="WeChat">✆</a>' +
-              '<a href="mailto:jinyunhj@163.com" aria-label="Email">✉</a>' +
+              '<a href="#" aria-label="WeChat" class="wechat-trigger" id="footerWechatBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4C4.9 4 1.6 6.7 1.6 10c0 1.9 1.1 3.6 2.8 4.7L3.6 17l2.6-1.3c.9.3 1.8.4 2.8.4h.6"/><path d="M22.4 16c0-2.8-2.8-5-6.2-5s-6.2 2.2-6.2 5 2.8 5 6.2 5c.8 0 1.6-.1 2.3-.4L21 21.7l-.6-2c1.2-.9 2-2.2 2-3.7z"/><path d="M6.5 9h.01M11 9h.01M14 15h.01M18 15h.01"/></svg></a>' +
+              '<div class="wechat-popup" id="footerWechatPopup">' +
+                '<div class="wechat-popup__inner">' +
+                  '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#07C160" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4C4.9 4 1.6 6.7 1.6 10c0 1.9 1.1 3.6 2.8 4.7L3.6 17l2.6-1.3c.9.3 1.8.4 2.8.4h.6"/><path d="M22.4 16c0-2.8-2.8-5-6.2-5s-6.2 2.2-6.2 5 2.8 5 6.2 5c.8 0 1.6-.1 2.3-.4L21 21.7l-.6-2c1.2-.9 2-2.2 2-3.7z"/></svg>' +
+                  '<div>' +
+                    '<strong>WeChat</strong>' +
+                    '<span>jinyunhj</span>' +
+                  '</div>' +
+                '</div>' +
+                '<div class="wechat-popup__divider"></div>' +
+                '<a href="https://wa.me/8613706102297" target="_blank" class="wechat-popup__inner wechat-popup__inner--link">' +
+                  '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>' +
+                  '<div>' +
+                    '<strong>WhatsApp</strong>' +
+                    '<span>+86 137 0610 2297</span>' +
+                  '</div>' +
+                '</a>' +
+              '</div>' +
+              '<a href="mailto:jinyunhj@163.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>' +
             '</div>' +
           '</div>' +
           '<div class="footer__col"><h4>' + t('footer.products') + '</h4>' +
@@ -141,12 +160,13 @@
             '<a href="resources.html">' + t('footer.resources') + '</a>' +
             '<a href="blog.html">' + t('footer.blog') + '</a>' +
           '</div>' +
-          '<div class="footer__col"><h4>' + t('footer.contactUs') + '</h4>' +
-            '<p>📞 +86 137 0610 2297</p>' +
-            '<p>☎ +86 0511-86451987</p>' +
-            '<p>✉ jinyunhj@163.com</p>' +
-            '<p>📍 Xifu Village, Lucheng Town, Danyang City, Jiangsu, China</p>' +
-            '<a href="contact.html" class="btn btn--accent btn--sm">' + t('cta.quote') + '</a>' +
+          '<div class="footer__col footer__contact-col"><h4>' + t('footer.contactUs') + '</h4>' +
+            '<ul class="fct-list">' +
+              '<li class="fct-list__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg><a href="tel:+8613706102297">+86 137 0610 2297</a></li>' +
+              '<li class="fct-list__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><a href="tel:+86051186451987">+86 0511-86451987</a></li>' +
+              '<li class="fct-list__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:jinyunhj@163.com">jinyunhj@163.com</a></li>' +
+              '<li class="fct-list__item fct-list__item--addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Xifu Village, Lucheng Town, Danyang City, Jiangsu, China</span></li>' +
+            '</ul>' +
           '</div>' +
         '</div>' +
         '<div class="footer__bottom"><div class="container footer__bottom-inner">' +
@@ -190,6 +210,21 @@
     /* Year */
     var yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    /* WeChat popup toggle */
+    var wcBtn = document.getElementById('footerWechatBtn');
+    var wcPopup = document.getElementById('footerWechatPopup');
+    if (wcBtn && wcPopup) {
+      wcBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        wcPopup.classList.toggle('wechat-popup--open');
+      });
+      document.addEventListener('click', function (e) {
+        if (!wcBtn.contains(e.target) && !wcPopup.contains(e.target)) {
+          wcPopup.classList.remove('wechat-popup--open');
+        }
+      });
+    }
 
     /* Sticky header reference (scroll listener bound once below) */
     header = document.getElementById('siteHeader');
@@ -310,7 +345,7 @@
       catalogStyles() + '</head><body>' +
       '<div class="ch"><div><h1>' + esc(title) + '</h1>' +
         '<p>Danyang Yixin Alloy Co., Ltd · Professional Nickel Alloy Provider · ISO 9001:2015</p></div>' +
-        '<div class="brand">Danyang Yixin Alloy</div></div>' +
+        '<div class="brand">Yixin Alloy</div></div>' +
       keys.map(function (k) { return gradeBlock(P[k]); }).join('') +
       '<div class="ft">+86 137 0610 2297 · jinyunhj@163.com · Xifu Village, Lucheng Town, Danyang City, Jiangsu, China &nbsp;|&nbsp; ' +
         'Values are nominal/typical per AWS A5.14 / ASTM. Mill Test Certificate supplied per shipment.</div>' +
@@ -356,7 +391,7 @@
         '.back svg{width:18px;height:18px}' +
         '.brand{font-weight:800;color:#1E66D0;letter-spacing:1px;margin-bottom:24px}</style></head><body>' +
         '<a class="back" href="javascript:window.close()" onclick="try{window.close();}catch(e){}; if(!window.closed){location.href=\'blog.html\';} return false;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>Back to Articles</a>' +
-        '<div class="brand">Danyang Yixin Alloy</div>' +
+        '<div class="brand">Yixin Alloy</div>' +
         '<span class="tag">' + meta + '</span><h1>' + title + '</h1>' +
         '<div class="by">By YIXIN Alloy Technical Team · Danyang Yixin Alloy Co., Ltd</div>' +
         (img ? '<img src="' + img + '" alt="' + title + '">' : '') +
