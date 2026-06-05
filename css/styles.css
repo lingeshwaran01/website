@@ -286,6 +286,9 @@ h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.4px; }
 .product-card h3 { font-size: 1.2rem; color: var(--navy); margin-bottom: 8px; }
 .product-card p { font-size: .92rem; color: var(--text-muted); flex: 1; }
 .product-card__foot { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; }
+.form-spec-list { list-style: none; padding: 0; margin: 10px 0 0; }
+.form-spec-list li { font-size: .85rem; color: var(--clr-text-muted, #666); padding: 3px 0 3px 18px; position: relative; }
+.form-spec-list li::before { content: "✓"; position: absolute; left: 0; color: var(--clr-accent, #c8972b); font-size: .8rem; }
 .tag { font-size: .74rem; font-weight: 600; letter-spacing: .4px; color: var(--orange); background: var(--orange-light); padding: 6px 12px; border-radius: 50px; }
 
 /* Accent-topped category cards (home product range) */
@@ -1600,7 +1603,7 @@ h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.4px; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
-  align-items: start;
+  align-items: stretch;
 }
 .chem-cert-layout__label {
   font-size: .72rem;
@@ -1613,24 +1616,114 @@ h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.4px; }
 .chem-cert-layout__certs {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  height: 100%;
+}
+
+/* Professional ISO cert panel */
+.iso-cert-panel {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid #d4dce8;
+  box-shadow: 0 4px 24px rgba(13,27,46,.10);
+  background: #fff;
+}
+.iso-cert-panel__img-wrap {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  background: #f0f4f8;\n}
+.iso-cert-panel__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+.iso-cert-panel__zoom {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255,255,255,.9);
+  border: 1px solid #d4dce8;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy, #0d1b2e);
+  text-decoration: none;
+  transition: background .2s;
+}
+.iso-cert-panel__zoom:hover { background: #fff; }
+.iso-cert-panel__body {
+  padding: 20px 22px 22px;
+  border-top: 3px solid var(--accent, #c8972b);
+  background: #fff;
+}
+.iso-cert-panel__badge {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  background: #d1fae5;
+  color: #065f46;
+  border-radius: 20px;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+}
+.iso-cert-panel__title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--navy, #0d1b2e);
+  margin: 0 0 8px;
+}
+.iso-cert-panel__desc {
+  font-size: .875rem;
+  color: #4a5568;
+  line-height: 1.55;
+  margin: 0 0 14px;
+}
+.iso-cert-panel__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.iso-cert-panel__list li {
+  font-size: .8rem;
+  color: #4a5568;
+  padding: 4px 0 4px 20px;
+  position: relative;
+}
+.iso-cert-panel__list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent, #c8972b);
+  font-weight: 700;
 }
 
 /* cert-img-grid side panel (3-up in composition section) */
 .cert-img-grid--side {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 12px;
+  max-width: 340px;
+  margin: 0 auto;
 }
 .cert-img-grid--side .cert-img-card {
   width: auto;
 }
 .cert-img-grid--side .cert-img-card__frame {
   aspect-ratio: 3/4;
+  min-height: 320px;
 }
-.cert-img-grid--side .cert-img-card__info h3 { font-size: .8rem; }
-.cert-img-grid--side .cert-img-card__info p  { font-size: .7rem; }
-.cert-img-grid--side .cert-img-card__info    { padding: 10px 12px 12px; }
+.cert-img-grid--side .cert-img-card__info h3 { font-size: 1rem; }
+.cert-img-grid--side .cert-img-card__info p  { font-size: .85rem; }
+.cert-img-grid--side .cert-img-card__info    { padding: 14px 16px 16px; }
 .cert-panel-viewall {
   display: block;
   font-size: .78rem;

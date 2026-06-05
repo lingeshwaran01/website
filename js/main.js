@@ -114,7 +114,7 @@
         '<div class="container footer__grid">' +
           '<div class="footer__col footer__brand">' +
             '<a href="index.html" class="brand brand--light">' +
-              '<img src="assets/img/logo.png" alt="Yixin Alloy" class="brand__logo brand__logo--light">' +
+              '<img src="assets/img/logo.png" alt="Yixin Alloy" class="brand__logo">' +
               '<span class="brand__text"><strong>Yixin Alloy</strong><small>Danyang Yixin Alloy Co., Ltd</small></span>' +
             '</a>' +
             '<p>' + t('footer.tagline') + '</p>' +

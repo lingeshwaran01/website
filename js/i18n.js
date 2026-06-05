@@ -61,7 +61,7 @@ window.YIXIN_I18N = {
     'range.subtitle': 'A complete consumables programme for joining, cladding, repair and maintenance across every nickel alloy family.',
     'card.mig.title': 'Nickel Alloy MIG Wires',
     'card.mig.desc': 'Spooled solid wires for high-deposition, semi-automatic and robotic GMAW welding.',
-    'card.tig.title': 'Nickel Alloy TIG Wires',
+    'card.tig.title': 'Nickel Alloy TIG',
     'card.tig.desc': 'Precision-cut straight lengths for clean, high-quality GTAW root and fill passes.',
     'card.elec.title': 'Electrodes',
     'card.elec.desc': 'Coated stick electrodes (SMAW) for field welding and out-of-position joints.',
