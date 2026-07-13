@@ -215,7 +215,7 @@ h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.4px; }
 .page-banner::before {
   content: ''; position: absolute; inset: 0;
   background: linear-gradient(120deg, rgba(15,23,42,.92), rgba(30,41,59,.82)),
-              url('../assets/img/nickel-alloy-factory.jpg') center/cover no-repeat;
+              url('../assets/img/nickel-alloy-factory.webp') center/cover no-repeat;
   z-index: 0;
 }
 .page-banner__inner { position: relative; z-index: 1; }
