@@ -183,7 +183,15 @@ h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.4px; }
 
 /* ---------- Hero (video) ---------- */
 .hero { position: relative; color: #fff; overflow: hidden; min-height: 88vh; display: flex; align-items: center; }
-.hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; pointer-events: none; }
+.hero__video::-webkit-media-controls,
+.hero__video::-webkit-media-controls-enclosure,
+.hero__video::-webkit-media-controls-panel,
+.hero__video::-webkit-media-controls-play-button,
+.hero__video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
 .hero__overlay {
   position: absolute; inset: 0; z-index: 1;
   background: linear-gradient(110deg, rgba(15,23,42,.95) 0%, rgba(15,23,42,.82) 45%, rgba(15,23,42,.55) 100%);
@@ -1621,7 +1629,7 @@ h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.4px; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
-  align-items: stretch;
+  align-items: start;
 }
 .chem-cert-layout__table,
 .chem-cert-layout__certs,
@@ -1629,7 +1637,7 @@ h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.4px; }
   min-width: 0;
 }
 .chem-cert-layout__table {
-  display: flex;
+  display: block;
 }
 .chem-cert-layout .table-wrap {
   width: 100%;
@@ -1662,10 +1670,10 @@ h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.4px; }
 .chem-cert-layout__certs {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto;
 }
 .chem-cert-layout__certs .iso-cert-panel {
-  height: 100%;
+  height: auto;
 }
 
 .product-comp-title {
@@ -2011,6 +2019,7 @@ h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.4px; }
     var(--navy);
   color: #fff; border-radius: var(--radius-lg); padding: 38px 34px;
   box-shadow: var(--shadow-md);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
 .contact-office { display: flex; }
 .contact-office .contact-info-card {
@@ -2019,6 +2028,10 @@ h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.4px; }
   min-height: 540px;
   display: flex;
   flex-direction: column;
+}
+.contact-office:hover .contact-info-card {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,.25), 0 4px 12px rgba(0,0,0,.15);
 }
 .contact-info-card::before {
   content: ""; position: absolute; top: -60px; right: -60px;
@@ -2046,15 +2059,18 @@ h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.4px; }
 .contact-info-card h3 { position: relative; margin-bottom: 8px; font-size: 1.5rem; }
 .contact-info-card__lead {
   position: relative; color: var(--gray-300); font-size: .92rem;
-  margin-bottom: 26px; padding-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,.1);
+  margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,.15);
 }
 .contact-info-item {
   position: relative; display: flex; align-items: center; gap: 16px;
-  padding: 12px 0; color: inherit;
-  border-top: 1px solid rgba(255,255,255,.06);
+  padding: 13px 0; color: inherit;
   transition: transform .25s var(--ease);
 }
-.contact-info-item:first-of-type { border-top: 0; }
+.contact-info-item:first-of-type { padding-top: 10px; }
+.contact-info-item:last-of-type { padding-bottom: 8px; }
+.contact-info-item--divider {
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
 a.contact-info-item:hover { transform: translateX(4px); }
 .contact-info-item .ic {
   width: 46px; height: 46px; border-radius: 12px;
@@ -2066,8 +2082,9 @@ a.contact-info-item:hover { transform: translateX(4px); }
 .contact-info-item .ic svg { width: 21px; height: 21px; }
 a.contact-info-item:hover .ic { background: var(--accent); border-color: var(--accent); color: #fff; }
 .contact-info-item__text { display: flex; flex-direction: column; min-width: 0; }
-.contact-info-item strong { display: block; font-size: .76rem; letter-spacing: .3px; text-transform: uppercase; color: var(--gray-300); font-weight: 600; }
-.contact-info-item span { font-size: .98rem; color: #fff; word-break: break-word; }
+.contact-info-item strong { display: block; font-size: .76rem; letter-spacing: .3px; text-transform: uppercase; color: var(--gray-300); font-weight: 600; margin-bottom: 2px; }
+.contact-info-item span { font-size: .98rem; color: #fff; word-break: break-word; line-height: 1.5; }
+.contact-email-nowrap { white-space: nowrap; word-break: normal; font-size: .92rem; }
 .map-embed { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200); }
 .map-embed iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; }
 
@@ -2433,6 +2450,6 @@ a.contact-info-item:hover .ic { background: var(--accent); border-color: var(--a
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
-  .hero__video { display: none; }
+  .hero__video { opacity: .85; }
 }
 

@@ -275,16 +275,137 @@
     revealTargets.forEach(function (el) { el.classList.add('visible'); });
   }
 
-  /* ---------- Hero video mute toggle ---------- */
-  var muteBtn = document.getElementById('heroMute');
-  var heroVideo = document.getElementById('heroVideo');
-  if (muteBtn && heroVideo) {
+var heroVideo = document.getElementById('heroVideo');
+var muteBtn = document.getElementById('heroMute');
+
+if (heroVideo) {
+  // Force muted state immediately for Safari autoplay
+  heroVideo.muted = true;
+  heroVideo.setAttribute('muted', '');
+  heroVideo.defaultMuted = true;
+  heroVideo.playsInline = true;
+  heroVideo.webkitPlaysinline = true;
+  heroVideo.setAttribute('playsinline', '');
+  heroVideo.setAttribute('webkit-playsinline', '');
+  heroVideo.preload = 'auto';
+
+  var playAttempts = 0;
+  var maxAttempts = 40;
+  var retryTimer = null;
+
+  function attemptPlay(force) {
+    if (!force && playAttempts >= maxAttempts) return;
+    if (!force) playAttempts++;
+
+    if (heroVideo.paused) {
+      heroVideo.muted = true;
+      var playPromise = heroVideo.play();
+      
+      if (playPromise !== undefined) {
+        playPromise.then(function() {
+          playAttempts = maxAttempts; // Stop trying
+          if (retryTimer) {
+            clearInterval(retryTimer);
+            retryTimer = null;
+          }
+        }).catch(function(error) {
+          if (!force && playAttempts < maxAttempts) {
+            setTimeout(attemptPlay, 300);
+          }
+        });
+      }
+    }
+  }
+
+  // Immediate play attempt
+  attemptPlay();
+
+  // Keep trying for a short window on iOS/WebKit without user interaction
+  retryTimer = setInterval(function () {
+    if (!heroVideo.paused) {
+      clearInterval(retryTimer);
+      retryTimer = null;
+      return;
+    }
+    if (playAttempts >= maxAttempts) {
+      clearInterval(retryTimer);
+      retryTimer = null;
+      return;
+    }
+    attemptPlay();
+  }, 500);
+
+  // Event-based play attempts for Safari
+  heroVideo.addEventListener('loadedmetadata', function() {
+    heroVideo.muted = true;
+    attemptPlay();
+  });
+
+  heroVideo.addEventListener('loadeddata', function() {
+    attemptPlay();
+  });
+
+  heroVideo.addEventListener('canplay', function() {
+    attemptPlay();
+  });
+
+  heroVideo.addEventListener('canplaythrough', function() {
+    attemptPlay();
+  });
+
+  window.addEventListener('load', function () {
+    if (heroVideo.paused) attemptPlay();
+  });
+
+  window.addEventListener('pageshow', function () {
+    if (heroVideo.paused) attemptPlay();
+  });
+
+  // IntersectionObserver to play when video is visible
+  if ('IntersectionObserver' in window) {
+    var videoObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting && heroVideo.paused) {
+          attemptPlay();
+        }
+      });
+    }, { threshold: 0.25 });
+    videoObserver.observe(heroVideo);
+  }
+
+  // User interaction fallback for iOS Low Power Mode
+  var hasInteracted = false;
+  var interactionHandler = function() {
+    if (!hasInteracted) {
+      hasInteracted = true;
+      heroVideo.muted = true;
+      playAttempts = 0;
+      attemptPlay(true);
+    }
+  };
+  
+  document.addEventListener('touchstart', interactionHandler, { once: true, passive: true });
+  document.addEventListener('click', interactionHandler, { once: true });
+  document.addEventListener('scroll', interactionHandler, { once: true, passive: true });
+
+  // Visibility change handler
+  document.addEventListener('visibilitychange', function() {
+    if (!document.hidden && heroVideo.paused) {
+      attemptPlay();
+    }
+  });
+
+  // Mute button toggle
+  if (muteBtn) {
     muteBtn.addEventListener('click', function () {
       heroVideo.muted = !heroVideo.muted;
       muteBtn.textContent = heroVideo.muted ? '🔇' : '🔊';
-      if (!heroVideo.muted) heroVideo.play();
+      if (heroVideo.paused) {
+        heroVideo.play();
+      }
     });
   }
+}
 
   /* ---------- Accordions ---------- */
   document.querySelectorAll('.accordion__head').forEach(function (head) {
