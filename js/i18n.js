@@ -22,7 +22,7 @@ window.YIXIN_I18N = {
     'nav.resources': 'Resources',
     'nav.blog': 'Blog',
     'nav.contact': 'Contact',
-    'cta.quote': 'Request a Quote',
+    'cta.quote': 'Get In Touch',
 
     /* Footer */
     'footer.tagline': '<strong>A trusted manufacturer of premium nickel alloy welding consumables.</strong> Since 2014, we have supplied over 1,000 clients worldwide with certified, project-ready solutions engineered for the most demanding applications.',
@@ -42,7 +42,7 @@ window.YIXIN_I18N = {
     'hero.eyebrow': 'Nickel Alloy Welding Consumables',
     'hero.title': 'Premium Nickel Alloy Welding Wires & Consumables',
     'hero.subtitle': 'Trusted solutions for corrosion-resistant and high-temperature welding applications — engineered for superior weld integrity and reliable performance.',
-    'hero.requestQuote': 'Request Quote',
+    'hero.requestQuote': 'Get In Touch',
     'hero.downloadCatalog': 'Download Catalog',
     'hero.badge1': 'Annual Capacity',
     'hero.badge2': 'Clients Served',
@@ -129,7 +129,7 @@ window.YIXIN_I18N = {
     'nav.resources': '资料下载',
     'nav.blog': '新闻资讯',
     'nav.contact': '联系我们',
-    'cta.quote': '获取报价',
+    'cta.quote': '联系我们',
 
     'footer.tagline': '值得信赖的高品质镍合金焊接材料制造商。自2014年以来，我们已为全球1,000多家客户提供经过认证、可直接用于项目的解决方案，专为最严苛的应用而设计。',
     'footer.products': '产品',
@@ -147,7 +147,7 @@ window.YIXIN_I18N = {
     'hero.eyebrow': '镍合金焊接耗材',
     'hero.title': '高品质镍合金焊丝及焊接耗材',
     'hero.subtitle': '面向耐腐蚀与高温焊接应用的可靠解决方案——专为优异的焊缝质量与稳定性能而设计。',
-    'hero.requestQuote': '获取报价',
+    'hero.requestQuote': '联系我们',
     'hero.downloadCatalog': '下载产品手册',
     'hero.badge1': '年产能',
     'hero.badge2': '服务客户',
@@ -228,7 +228,7 @@ window.YIXIN_I18N = {
     'nav.resources': 'Recursos',
     'nav.blog': 'Blog',
     'nav.contact': 'Contacto',
-    'cta.quote': 'Solicitar Cotización',
+    'cta.quote': 'Contáctenos',
 
     'footer.tagline': 'Fabricante de confianza de consumibles de soldadura de aleaciones de níquel de primera calidad. Desde 2014, hemos suministrado a más de 1000 clientes en todo el mundo soluciones certificadas y listas para proyectos, diseñadas para las aplicaciones más exigentes.',
     'footer.products': 'Productos',
@@ -246,7 +246,7 @@ window.YIXIN_I18N = {
     'hero.eyebrow': 'Consumibles de Soldadura de Aleación de Níquel',
     'hero.title': 'Alambres y Consumibles Premium de Aleación de Níquel',
     'hero.subtitle': 'Soluciones confiables para aplicaciones de soldadura resistentes a la corrosión y a altas temperaturas — diseñadas para una integridad de soldadura superior y un rendimiento fiable.',
-    'hero.requestQuote': 'Solicitar Cotización',
+    'hero.requestQuote': 'Contáctenos',
     'hero.downloadCatalog': 'Descargar Catálogo',
     'hero.badge1': 'Capacidad Anual',
     'hero.badge2': 'Clientes Atendidos',

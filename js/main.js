@@ -65,7 +65,7 @@
     { href: 'quality.html', label: 'Quality', key: 'quality' },
     { href: 'resources.html', label: 'Resources', key: 'resources' },
     { href: 'blog.html', label: 'Blog', key: 'blog' },
-    { href: 'contact.html', label: 'Contact', key: 'contact' }
+    { href: 'contact.html', label: 'Contact Us', key: 'contact' }
   ];
 
   /* ---------- Header ---------- */
@@ -91,7 +91,6 @@
         '<span class="topbar__item">' + t('topbar.iso') + '</span>' +
         '<span class="topbar__item">' + t('topbar.standards') + '</span>' +
         '<span class="topbar__item">' + t('topbar.mtc') + '</span>' +
-        '<span class="topbar__item topbar__item--right">📞 +86 137 0610 2297 &nbsp;|&nbsp; ✉ jinyunhj@163.com</span>' +
         langSwitcher +
       '</div></div>' +
       '<header class="header" id="siteHeader"><div class="container header__inner">' +
@@ -101,7 +100,7 @@
         '</a>' +
         '<nav class="nav" id="nav">' +
           '<div class="nav__links">' + links + '</div>' +
-          '<a href="contact.html" class="btn btn--accent btn--sm nav__cta">' + t('cta.quote') + '</a>' +
+          '<a href="tel:+919498498318" class="btn btn--accent btn--sm nav__cta"><span class="nav__cta-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.78.65 2.62a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.46-1.22a2 2 0 0 1 2.11-.45c.84.31 1.72.53 2.62.65A2 2 0 0 1 22 16.92z"/></svg></span><span>' + t('nav.contact') + '</span></a>' +
         '</nav>' +
         '<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>' +
       '</div></header>';
@@ -123,34 +122,13 @@
                 '<span>ASTM</span><span>AMS</span><span>AWS</span><span>BSI</span><span>GB/T</span><span>DIN</span><span>JIS</span><span>GOST</span><span>SS</span>' +
               '</div>' +
             '</div>' +
-            '<div class="footer__social">' +
-              '<a href="#" aria-label="WeChat" class="wechat-trigger" id="footerWechatBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4C4.9 4 1.6 6.7 1.6 10c0 1.9 1.1 3.6 2.8 4.7L3.6 17l2.6-1.3c.9.3 1.8.4 2.8.4h.6"/><path d="M22.4 16c0-2.8-2.8-5-6.2-5s-6.2 2.2-6.2 5 2.8 5 6.2 5c.8 0 1.6-.1 2.3-.4L21 21.7l-.6-2c1.2-.9 2-2.2 2-3.7z"/><path d="M6.5 9h.01M11 9h.01M14 15h.01M18 15h.01"/></svg></a>' +
-              '<div class="wechat-popup" id="footerWechatPopup">' +
-                '<div class="wechat-popup__inner">' +
-                  '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#07C160" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4C4.9 4 1.6 6.7 1.6 10c0 1.9 1.1 3.6 2.8 4.7L3.6 17l2.6-1.3c.9.3 1.8.4 2.8.4h.6"/><path d="M22.4 16c0-2.8-2.8-5-6.2-5s-6.2 2.2-6.2 5 2.8 5 6.2 5c.8 0 1.6-.1 2.3-.4L21 21.7l-.6-2c1.2-.9 2-2.2 2-3.7z"/></svg>' +
-                  '<div>' +
-                    '<strong>WeChat</strong>' +
-                    '<span>jinyunhj</span>' +
-                  '</div>' +
-                '</div>' +
-                '<div class="wechat-popup__divider"></div>' +
-                '<a href="https://wa.me/8613706102297" target="_blank" class="wechat-popup__inner wechat-popup__inner--link">' +
-                  '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>' +
-                  '<div>' +
-                    '<strong>WhatsApp</strong>' +
-                    '<span>+86 137 0610 2297</span>' +
-                  '</div>' +
-                '</a>' +
-              '</div>' +
-              '<a href="mailto:jinyunhj@163.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>' +
-            '</div>' +
           '</div>' +
           '<div class="footer__col"><h4>' + t('footer.products') + '</h4>' +
-            '<a href="product.html?grade=nickel-200">Nickel 200 Wire</a>' +
-            '<a href="product.html?grade=nickel-201">Nickel 201 Wire</a>' +
-            '<a href="product.html?grade=inconel-625">Inconel 625 (ERNiCrMo-3)</a>' +
-            '<a href="product.html?grade=inconel-82">Inconel 82 (ERNiCr-3)</a>' +
+            '<a href="product.html?grade=hastelloy-c276">Hastelloy C-276 Wire</a>' +
+            '<a href="product.html?grade=hastelloy-c22">Hastelloy C-22 Wire</a>' +
             '<a href="product.html?grade=monel-400">Monel 400 Wire</a>' +
+            '<a href="product.html?grade=monel-k500">Monel K-500 Wire</a>' +
+            '<a href="product.html?grade=inconel-625">Inconel 625 (ERNiCrMo-3)</a>' +
             '<a href="products.html">' + t('footer.allProducts') + '</a>' +
           '</div>' +
           '<div class="footer__col"><h4>' + t('footer.company') + '</h4>' +
@@ -161,12 +139,10 @@
             '<a href="blog.html">' + t('footer.blog') + '</a>' +
           '</div>' +
           '<div class="footer__col footer__contact-col"><h4>' + t('footer.contactUs') + '</h4>' +
-            '<ul class="fct-list">' +
-              '<li class="fct-list__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg><a href="tel:+8613706102297">+86 137 0610 2297</a></li>' +
-              '<li class="fct-list__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><a href="tel:+86051186451987">+86 0511-86451987</a></li>' +
-              '<li class="fct-list__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:jinyunhj@163.com">jinyunhj@163.com</a></li>' +
-              '<li class="fct-list__item fct-list__item--addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Xifu Village, Lucheng Town, Danyang City, Jiangsu, China</span></li>' +
-            '</ul>' +
+            '<a href="tel:+8613706102297"><span class="fc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.78.65 2.62a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.46-1.22a2 2 0 0 1 2.11-.45c.84.31 1.72.53 2.62.65A2 2 0 0 1 22 16.92z"/></svg></span>China: +86 137 0610 2297</a>' +
+            '<a href="tel:+919498498318"><span class="fc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.78.65 2.62a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.46-1.22a2 2 0 0 1 2.11-.45c.84.31 1.72.53 2.62.65A2 2 0 0 1 22 16.92z"/></svg></span>India: +91 94984 98318</a>' +
+            '<a href="tel:+971509399614"><span class="fc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.78.65 2.62a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.46-1.22a2 2 0 0 1 2.11-.45c.84.31 1.72.53 2.62.65A2 2 0 0 1 22 16.92z"/></svg></span>UAE: +971 50 939 9614</a>' +
+            '<a href="mailto:info@dyangyixinalloy.com"><span class="fc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2" ry="2"/><path d="M3 7l9 6 9-6"/></svg></span>info@dyangyixinalloy.com</a>' +
           '</div>' +
         '</div>' +
         '<div class="footer__bottom"><div class="container footer__bottom-inner">' +
@@ -248,7 +224,7 @@
   var revealTargets = document.querySelectorAll(
     '.section__head, .card, .feature, .industry-card, .split__media, .split__content, ' +
     '.spec-table, .table-wrap, .stat-card, .cert-badge, .resource-item, .accordion__item, ' +
-    '.sizes, .form-card, .contact-info-card, .map-embed, .pill-list'
+    '.sizes, .contact-info-card, .map-embed, .pill-list'
   );
   revealTargets.forEach(function (el) { el.classList.add('reveal'); });
   if ('IntersectionObserver' in window) {

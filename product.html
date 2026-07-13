@@ -149,7 +149,10 @@
           <h2 style="font-size:1.6rem">Typical Applications</h2>
         </div>
         <ul class="checklist" id="appList"></ul>
-        <div class="section__head section__head--left mt-40" style="margin-bottom:16px">
+      </div>
+
+      <div>
+        <div class="section__head section__head--left" style="margin-bottom:16px">
           <span class="section__eyebrow">Downloads</span>
           <h2 style="font-size:1.6rem">Documentation</h2>
         </div>
@@ -168,27 +171,6 @@
           <span class="resource-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2L20 7.5L9 18.5a2.828 2.828 0 1 1-4-4L16.5 3.5"/><path d="M15 3l4 4"/><path d="M10 12l2 2"/></svg></span><span>Intergranular corrosion — Method B</span></span>
           <span class="link-arrow">Download →</span>
         </a>
-      </div>
-      <div class="form-card">
-        <h3 style="color:var(--navy);margin-bottom:6px">Request a Quote</h3>
-        <p style="color:var(--text-muted);font-size:.92rem;margin-bottom:20px">Get pricing within 24 hours — fill in your requirement below.</p>
-        <form data-quote novalidate>
-          <div class="form-row">
-            <div class="field"><label>Company Name *</label><input type="text" required /></div>
-            <div class="field"><label>Contact Person *</label><input type="text" required /></div>
-          </div>
-          <div class="form-row">
-            <div class="field"><label>Email *</label><input type="email" required /></div>
-            <div class="field"><label>Phone Number</label><input type="tel" /></div>
-          </div>
-          <div class="form-row">
-            <div class="field"><label>Product Required *</label><input type="text" id="rfqProduct" readonly /></div>
-            <div class="field"><label>Quantity</label><input type="text" placeholder="e.g. 500 kg" /></div>
-          </div>
-          <div class="field"><label>Message</label><textarea rows="4" placeholder="Tell us about your application, standard or delivery timeline..."></textarea></div>
-          <button type="submit" class="btn btn--accent btn--block btn--lg">Get Instant Quote</button>
-          <p class="form-success" hidden>✅ Thank you! Your request has been received. Our team will reply within 24 hours.</p>
-        </form>
       </div>
     </div>
   </section>
@@ -242,7 +224,8 @@
       document.getElementById('pOverviewTitle').textContent = p.name;
       document.getElementById('pOverview').textContent = p.overview;
       document.getElementById('pStandards').innerHTML = p.standards.map(function (s) { return '<span class="pill">' + s + '</span>'; }).join('');
-      document.getElementById('rfqProduct').value = p.name;
+      var rfqProduct = document.getElementById('rfqProduct');
+      if (rfqProduct) rfqProduct.value = p.name;
 
       /* ----- Key facts strip (pull standout values) ----- */
       function findMech(key) {

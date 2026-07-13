@@ -3,4 +3,4 @@ Allow: /
 Disallow: /env/
 Disallow: /assets/docs/
 
-Sitemap: https://www.yixinalloy.com/sitemap.xml
+Sitemap: https://www.dyangyixinalloy.com/sitemap.xml
