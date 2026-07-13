@@ -1623,6 +1623,34 @@ h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.4px; }
   gap: 32px;
   align-items: stretch;
 }
+.chem-cert-layout__table,
+.chem-cert-layout__certs,
+.iso-cert-panel {
+  min-width: 0;
+}
+.chem-cert-layout__table {
+  display: flex;
+}
+.chem-cert-layout .table-wrap {
+  width: 100%;
+  overflow-x: hidden;
+}
+.chem-cert-layout .data-table {
+  min-width: 0;
+  table-layout: fixed;
+}
+.chem-cert-layout .data-table th,
+.chem-cert-layout .data-table td {
+  padding: 12px 14px;
+  font-size: clamp(.78rem, 1.4vw, .9rem);
+  word-break: break-word;
+}
+.chem-cert-layout .data-table thead th {
+  white-space: normal;
+}
+.chem-cert-layout .data-table tbody tr:last-child td {
+  border-bottom: none;
+}
 .chem-cert-layout__label {
   font-size: .72rem;
   font-weight: 700;
@@ -1635,6 +1663,22 @@ h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.4px; }
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+.chem-cert-layout__certs .iso-cert-panel {
+  height: 100%;
+}
+
+.product-comp-title {
+  font-size: 1.6rem;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+.product-comp-note {
+  color: var(--gray);
+  font-size: .95rem;
+  line-height: 1.55;
+  max-width: none;
+  white-space: nowrap;
 }
 
 /* Professional ISO cert panel */
@@ -1757,6 +1801,20 @@ h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.4px; }
 @media (max-width: 768px) {
   .chem-cert-layout { grid-template-columns: 1fr; }
   .cert-img-grid--side { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 980px) {
+  .chem-cert-layout { grid-template-columns: 1fr; gap: 22px; }
+  .chem-cert-layout__table { display: block; }
+  .chem-cert-layout .table-wrap,
+  .chem-cert-layout__certs .iso-cert-panel { height: auto; }
+}
+@media (max-width: 560px) {
+  .chem-cert-layout { gap: 18px; }
+  .iso-cert-panel__img-wrap { height: 150px; }
+  .iso-cert-panel__body { padding: 16px 16px 18px; }
+  .iso-cert-panel__title { font-size: 1rem; }
+  .iso-cert-panel__desc { font-size: .82rem; }
+  .iso-cert-panel__list li { font-size: .76rem; }
 }
 
 /* ---------- Family cards (alloy families + grade chips) ---------- */
@@ -1937,11 +1995,12 @@ h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.4px; }
 .resource-item__text span { font-size: .82rem; color: var(--text-muted); }
 .resource-item .link-arrow {
   flex-shrink: 0; font-size: .82rem; color: var(--accent);
-  transition: opacity .28s, transform .28s;
+  padding: 4px 8px; border-radius: 999px;
+  transition: opacity .28s, transform .28s, background-color .28s, color .28s;
 }
 @media (hover: hover) {
   .resource-item .link-arrow { opacity: 0; transform: translateX(-6px); }
-  .resource-item:hover .link-arrow { opacity: 1; transform: translateX(0); }
+  .resource-item:hover .link-arrow { opacity: 1; transform: translateX(0); background: var(--accent-soft); }
 }
 
 /* ---------- Contact ---------- */
@@ -2367,6 +2426,9 @@ a.contact-info-item:hover .ic { background: var(--accent); border-color: var(--a
 @media (max-width: 460px) {
   .grid--4, .grid--5 { grid-template-columns: 1fr; }
   .form-card { padding: 24px; }
+  .footer__std-label { font-size: .64rem; letter-spacing: 1px; }
+  .footer__std-chips { max-width: 100%; gap: 6px; }
+  .footer__std-chips span { font-size: .66rem; padding: 3px 8px; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }

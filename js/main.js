@@ -220,6 +220,39 @@
 
   renderChrome();
 
+  /* ---------- Resources datasheets (from YIXIN_FAMILIES, excluding consumables) ---------- */
+  function renderDatasheetGrid() {
+    if (PAGE !== 'resources') return;
+    var grid = document.getElementById('datasheetGrid');
+    var families = window.YIXIN_FAMILIES || [];
+    var products = window.YIXIN_PRODUCTS || {};
+    if (!grid || !families.length) return;
+
+    var seen = {};
+    var cards = [];
+    families.forEach(function (fam) {
+      var key = (fam && fam.key) ? String(fam.key).toLowerCase() : '';
+      var name = (fam && fam.name) ? String(fam.name).toLowerCase() : '';
+      if (key === 'welding' || name.indexOf('consumable') !== -1) return;
+      (fam.grades || []).forEach(function (g) {
+        var slug = g && g.slug;
+        if (!slug || seen[slug] || !products[slug]) return;
+        seen[slug] = true;
+        var title = products[slug].name || g.name || slug;
+        cards.push(
+          '<a href="product.html?grade=' + slug + '" class="resource-item">' +
+            '<span class="resource-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h8M8 9h2"/></svg></span>' +
+            '<span class="resource-item__text"><strong>' + esc(title) + '</strong><span>Datasheet &amp; SDS</span></span>' +
+            '<span class="link-arrow">Download →</span>' +
+          '</a>'
+        );
+      });
+    });
+    grid.innerHTML = cards.join('');
+  }
+
+  renderDatasheetGrid();
+
   /* ---------- Reveal on scroll ---------- */
   var revealTargets = document.querySelectorAll(
     '.section__head, .card, .feature, .industry-card, .split__media, .split__content, ' +
@@ -339,6 +372,19 @@
   /* Resource "Download" links that have no real target */
   document.querySelectorAll('.resource-item[href="#"], a[href="#"][data-download]').forEach(function (el) {
     el.addEventListener('click', function (e) { e.preventDefault(); openCatalog(''); });
+  });
+
+  /* Resources datasheet cards: title/card click -> product page, Download click -> datasheet */
+  document.querySelectorAll('body[data-page="resources"] .resource-item[href*="product.html?grade="]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      var isDownloadClick = e.target && e.target.closest && e.target.closest('.link-arrow');
+      if (!isDownloadClick) { return; }
+      e.preventDefault();
+      var href = el.getAttribute('href') || '';
+      var q = href.split('?')[1] || '';
+      var slug = new URLSearchParams(q).get('grade') || '';
+      openCatalog(slug);
+    });
   });
   window.YIXIN_openCatalog = openCatalog;
 
