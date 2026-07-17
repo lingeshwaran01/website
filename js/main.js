@@ -96,7 +96,7 @@
       '<header class="header" id="siteHeader"><div class="container header__inner">' +
         '<a href="index.html" class="brand">' +
           '<img src="assets/img/logo.png" alt="Yixin Alloy" class="brand__logo">' +
-          '<span class="brand__text"><strong>Yixin Alloy</strong><small>Danyang Yixin Alloy Co., Ltd</small></span>' +
+          '<span class="brand__text"><strong>Yixin Alloy</strong><small>Dyang Yixin Alloy Co., Ltd</small></span>' +
         '</a>' +
         '<nav class="nav" id="nav">' +
           '<div class="nav__links">' + links + '</div>' +
@@ -114,7 +114,7 @@
           '<div class="footer__col footer__brand">' +
             '<a href="index.html" class="brand brand--light">' +
               '<img src="assets/img/logo.png" alt="Yixin Alloy" class="brand__logo">' +
-              '<span class="brand__text"><strong>Yixin Alloy</strong><small>Danyang Yixin Alloy Co., Ltd</small></span>' +
+              '<span class="brand__text"><strong>Yixin Alloy</strong><small>Dyang Yixin Alloy Co., Ltd</small></span>' +
             '</a>' +
             '<p>' + t('footer.tagline') + '</p>' +
             '<div class="footer__std"><span class="footer__std-label">Certified to International Standards</span>' +
@@ -146,7 +146,7 @@
           '</div>' +
         '</div>' +
         '<div class="footer__bottom"><div class="container footer__bottom-inner">' +
-          '<span>© <span id="year"></span> Danyang Yixin Alloy Co., Ltd. ' + t('footer.rights') + '</span>' +
+          '<span>© <span id="year"></span> Dyang Yixin Alloy Co., Ltd. ' + t('footer.rights') + '</span>' +
           '<span>' + t('footer.seo') + '</span>' +
         '</div></div>' +
       '</footer>';
@@ -474,10 +474,10 @@ if (heroVideo) {
     var html = '<!DOCTYPE html><html><head><meta charset="utf-8"><title>YIXIN Alloy — ' + esc(title) + '</title>' +
       catalogStyles() + '</head><body>' +
       '<div class="ch"><div><h1>' + esc(title) + '</h1>' +
-        '<p>Danyang Yixin Alloy Co., Ltd · Professional Nickel Alloy Provider · ISO 9001:2015</p></div>' +
+        '<p>Dyang Yixin Alloy Co., Ltd · Professional Nickel Alloy Provider · ISO 9001:2015</p></div>' +
         '<div class="brand">Yixin Alloy</div></div>' +
       keys.map(function (k) { return gradeBlock(P[k]); }).join('') +
-      '<div class="ft">+86 137 0610 2297 · jinyunhj@163.com · Xifu Village, Lucheng Town, Danyang City, Jiangsu, China &nbsp;|&nbsp; ' +
+      '<div class="ft">+86 137 0610 2297 · jinyunhj@163.com · Xifu Village, Lucheng Town, Dyang City, Jiangsu, China &nbsp;|&nbsp; ' +
         'Values are nominal/typical per AWS A5.14 / ASTM. Mill Test Certificate supplied per shipment.</div>' +
       '<scr' + 'ipt>window.onload=function(){setTimeout(function(){window.print();},300);}</scr' + 'ipt>' +
       '</body></html>';
@@ -536,7 +536,7 @@ if (heroVideo) {
         '<a class="back" href="javascript:window.close()" onclick="try{window.close();}catch(e){}; if(!window.closed){location.href=\'blog.html\';} return false;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>Back to Articles</a>' +
         '<div class="brand">Yixin Alloy</div>' +
         '<span class="tag">' + meta + '</span><h1>' + title + '</h1>' +
-        '<div class="by">By YIXIN Alloy Technical Team · Danyang Yixin Alloy Co., Ltd</div>' +
+        '<div class="by">By YIXIN Alloy Technical Team · Dyang Yixin Alloy Co., Ltd</div>' +
         (img ? '<img src="' + img + '" alt="' + title + '">' : '') +
         '<p>' + excerpt + '</p>' +
         '<p>Our metallurgical and welding engineers work alongside EPC contractors, fabricators and OEMs to ' +
